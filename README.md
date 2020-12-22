@@ -1,8 +1,8 @@
 # pkg-update
 
-Package update helper
+package update helper
 
-## Cron
+## cron
 
 `sudo crontab -e`
 ```bash
