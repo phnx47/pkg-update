@@ -2,7 +2,15 @@
 
 package update helper
 
-## cron
+## prepare
+
+```bash
+cd /home/sergey/Projects/My
+git clone git@gitlab.com:phnx47/pkg-update.git
+mkdir -p /home/sergey/logs/pkg-update
+```
+
+## cron tasks
 
 `sudo crontab -e`
 ```bash
