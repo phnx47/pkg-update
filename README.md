@@ -21,6 +21,6 @@ package update helper
 #Update Npm packages
 40 */6 * * *	/home/sergey/Projects/My/pkg-update/npm.sh  >> /home/sergey/logs/pkg-update/$(date -d"-0 days" +\%Y\-%m\-%d)-npm.log
 
-#Clean lgos
+#Clean logs
 55 */6 * * *	/home/sergey/Projects/My/pkg-update/clean-log.sh  >> /home/sergey/logs/pkg-update/$(date -d"-0 days" +\%Y\-%m\-%d)-clean-log.log
 ```
