@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  run:
+  close-pull-request:
     runs-on: ubuntu-20.04
     steps:
     - uses: superbrothers/close-pull-request@v3
