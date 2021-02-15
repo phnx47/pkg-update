@@ -26,8 +26,8 @@ MAILFROM=noreply@phnx47.net
 MAILTO=arch@phnx47.net
 
 #Update Pacman/Aur packages
-30 */4 * * *  cronic  /home/sergey/Projects/My/pkg-update/paru.sh                                                                 
+5 23 * * *  cronic  /home/sergey/Projects/My/pkg-update/paru.sh   
 
 #Update Cargo packages
-35 */8 * * *  cronic  /home/sergey/Projects/My/pkg-update/cargo.sh
+10 0 * * *  cronic  /home/sergey/Projects/My/pkg-update/cargo.sh
 ```
