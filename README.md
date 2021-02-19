@@ -5,19 +5,13 @@ Package update helper
 ## Prepare
 
 ```sh
-cd /home/sergey/Projects/My
+cd ~/Projects/My
 git clone git@gitlab.com:phnx47/pkg-update.git
 ```
 
 You may just run scripts, make aliases or use cron
 
-## Cron tasks
-
-I prefer use `paru` for update packages, and `cronic` for notifications
-
-```sh
-paru -S cronic # install cronic https://habilis.net/cronic/
-```
+## Crontab examples
 
 `crontab -e`
 
@@ -26,8 +20,24 @@ MAILFROM=noreply@phnx47.net
 MAILTO=arch@phnx47.net
 
 #Update Pacman/Aur packages
-5 23 * * *  cronic  /home/sergey/Projects/My/pkg-update/paru.sh   
+5 5 * * * ~/Projects/My/pkg-update/paru.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-paru.log
 
 #Update Cargo packages
-10 0 * * *  cronic  /home/sergey/Projects/My/pkg-update/cargo.sh
+10 6 * * *  ~/Projects/My/pkg-update/cargo.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-cargo.log
+
+#Clean logs
+20 6 * * *  ~/Projects/My/pkg-update/clean-log.sh  >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-clean-log.log
+```
+
+For next example, need install [cronic](https://habilis.net/cronic/)
+
+```sh
+MAILFROM=noreply@phnx47.net
+MAILTO=arch@phnx47.net
+
+#Update Pacman/Aur packages
+5 23 * * *  cronic  ~/Projects/My/pkg-update/paru.sh
+
+#Update Cargo packages
+10 0 * * *  cronic  ~/Projects/My/pkg-update/cargo.sh
 ```
