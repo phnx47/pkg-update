@@ -24,9 +24,6 @@ MAILTO=arch@phnx47.net
 
 #Update Cargo packages
 10 6 * * *  ~/Projects/My/pkg-update/cargo.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-cargo.log
-
-#Clean logs
-20 6 * * *  ~/Projects/My/pkg-update/clean-log.sh  >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-clean-log.log
 ```
 
 For next example, need install [cronic](https://habilis.net/cronic/)
