@@ -6,7 +6,7 @@ Package update helper
 
 ```sh
 cd ~/Projects/My
-git clone git@gitlab.com:phnx47/pkg-update.git
+git clone git@github.com:phnx47/pkg-update.git
 ```
 
 You may just run scripts, make aliases or use cron
