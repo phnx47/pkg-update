@@ -1,4 +1,4 @@
 #!/bin/sh
 
 npm update -g
-echo "Npm packages are up-to-date!"
+echo "Npm packages update finished!"
