@@ -16,11 +16,16 @@ You may just run scripts, make aliases or use cron
 `crontab -e`
 
 ```sh
+#Update all packages
+5 5 * * * ~/Projects/My/pkg-update/all.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y").log 2>&1
+```
+
+```sh
 MAILFROM=noreply@phnx47.net
 MAILTO=arch@phnx47.net
 
 #Update Pacman/Aur packages
-5 5 * * * ~/Projects/My/pkg-update/paru.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-paru.log
+5 5 * * * ~/Projects/My/pkg-update/arch.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-arch.log
 
 #Update Cargo packages
 10 6 * * *  ~/Projects/My/pkg-update/cargo.sh >> ~/logs/pkg-update/$(date +"\%d-\%m-\%Y")-cargo.log
@@ -33,7 +38,7 @@ MAILFROM=noreply@phnx47.net
 MAILTO=arch@phnx47.net
 
 #Update Pacman/Aur packages
-5 23 * * *  cronic  ~/Projects/My/pkg-update/paru.sh
+5 23 * * *  cronic  ~/Projects/My/pkg-update/arch.sh
 
 #Update Cargo packages
 10 0 * * *  cronic  ~/Projects/My/pkg-update/cargo.sh
